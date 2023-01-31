@@ -10,7 +10,7 @@ import './form.css'
  * rating is an array with numbers or words 
  * @returns 
  */
-const Form = ({ name, number, formObject, handleChange }) => {
+const Form = ({ name, number, formObject, handleChange, handleSubmit }) => {
 
     //   const inputItems = rating.map(item => {
 
@@ -36,7 +36,7 @@ const Form = ({ name, number, formObject, handleChange }) => {
 
 
     return (
-        <form action="" className='form_container'>
+        <form onSubmit={handleSubmit} className='form_container'>
             <span><img src={startIcon} alt="start" /></span>
             <h2>How did we do</h2>
             <p>
@@ -46,7 +46,7 @@ const Form = ({ name, number, formObject, handleChange }) => {
             <div className='form__input'>
                 {formInputs}
             </div>
-            <button className='form_button' type='submit'>Submit</button>
+            <button className='form_button'>Submit</button>
         </form>
     )
 }

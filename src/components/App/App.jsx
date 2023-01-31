@@ -6,21 +6,37 @@ import './App.css'
 function App() {
 
   const [form, setForm ] = useState({rating: 0})
+  const [confirmation, setConfirmation] = useState(false)
 
   const handleChange = (event) => {
-    const {name, value} = event.target
-    
+    const {name, value} = event.target  
     setForm( prev => ({
       ...prev,
       [name]: parseInt(value),
     }))
   }
 
-  console.log(form)
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    if(form.rating != 0)
+      setConfirmation(prev => !prev)
+  }
+
 
   return (
     <>
-      <Form name="rating" number={5} formObject={form} handleChange={handleChange} />
+      {
+        confirmation ?
+          <Confirmation value={form.rating}/>
+          :
+          <Form 
+            name="rating" 
+            number={5} 
+            formObject={form} 
+            handleChange={handleChange} 
+            handleSubmit={handleSubmit} 
+          />
+      }
     </>
   )
 }

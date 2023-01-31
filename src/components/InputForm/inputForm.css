@@ -5,9 +5,21 @@
 .input_form_label {
     width: 2.4rem;
     height: 2.4rem;
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     color: var(--medium-grey);
     background-color: var(--dark-blue-label);
+}
+
+.input_form_label:hover {
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.input_form_input:checked + .input_form_label {
+    background-color: var(--medium-grey);
+    color: var(--white);
 }

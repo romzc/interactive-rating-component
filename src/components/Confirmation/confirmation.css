@@ -1,0 +1,37 @@
+.confirmation_container {
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    width: 90%;
+    margin: 0 auto;
+    row-gap: 1.3rem;
+    padding: 1.9rem 1.2rem;
+    border-radius: 24px;
+    background-color: var(--dark-blue);
+}
+
+.confirmation_selected {
+    padding: 0.2rem 0.98rem;
+    border-radius: 12px;
+    background-color: var(--dark-blue-label);
+    font-size: var(--font-size);
+    color: var(--orange);
+}
+
+.confirmation_container  > h2 {
+    color: var(--white);
+}
+
+.confirmation_message {
+    text-align: center;
+    color: var(--light-grey);
+    font-size: var(--font-size);
+}
+
+
+
+@media (min-width: 370px) {
+    .confirmation_container {
+        max-width: 370px;
+    }
+}
