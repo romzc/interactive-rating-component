@@ -1,0 +1,13 @@
+.input_form_input {
+    display: none;
+}
+
+.input_form_label {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    color: var(--medium-grey);
+    background-color: var(--dark-blue-label);
+}

@@ -1,16 +1,27 @@
 import { useState } from 'react'
 import { Confirmation } from '../Confirmation/Confirmation'
-import { Form } from '../Form/Form'
+import { Form } from '../Form/Form.jsx'
 import './App.css'
 
 function App() {
 
-  const [count, setCount] = useState(0)
+  const [form, setForm ] = useState({rating: 0})
+
+  const handleChange = (event) => {
+    const {name, value} = event.target
+    
+    setForm( prev => ({
+      ...prev,
+      [name]: parseInt(value),
+    }))
+  }
+
+  console.log(form)
 
   return (
-    <div className="app_container">
-      <Form />
-    </div>
+    <>
+      <Form name="rating" number={5} formObject={form} handleChange={handleChange} />
+    </>
   )
 }
 
