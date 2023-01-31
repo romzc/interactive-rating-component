@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/romzc/interactive-rating-component)
+- Live Site URL: [Add live site URL here](https://63d9a5f94348a90aa8145d59--chipper-dragon-a7144a.netlify.app/)
 
 ## My process
 
